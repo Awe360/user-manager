@@ -2,11 +2,10 @@ pipeline {
     agent any 
 
     environment {
-        // CHANGE THESE
-        DOCKER_IMAGE_NAME = "awoke/user-manager"  
-        DOCKER_TAG        = "${env.BUILD_NUMBER}" 
+        DOCKER_IMAGE_NAME     = "awoke/user-manager"
+        DOCKER_TAG            = "${env.BUILD_NUMBER}"
         DOCKER_CREDENTIALS_ID = 'docker-hub-credentials'
-        KUBECONFIG = "${env.HOME}/.kube/config-minikube"
+        KUBECONFIG            = "C:\\jenkins-kube\\config-minikube"
     }
 
     stages {
